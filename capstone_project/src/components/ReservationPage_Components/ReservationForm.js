@@ -63,7 +63,7 @@ export default function ReservationForm(props) {
             postData.guest_count = postValues['guests'];
             postData.occasion = postValues['occasion'];
             // submit("https://john.com/contactme", values);
-            axios.post("http://127.0.0.1:8000/api/create", postData)
+            axios.post("https://k808.pythonanywhere.com/api/create", postData)
             .then((response) => {
                 console.log(response)
             }).catch((err) => {

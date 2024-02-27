@@ -19,7 +19,7 @@ const ReservationPageMain = () => {
         // const availableTimesUniqueList = Array.from(availableTimesUniqueSet);
         // setAvailableTimes(availableTimesUniqueList);
 
-        axios.get('http://127.0.0.1:8000/api/available?date='+date)
+        axios.get('https://k808.pythonanywhere.com/api/available?date='+date)
         .then((response)=>{
             console.log("*********AXIOS RESPONSE**********", response.data)
             setAvailableTimes(response.data.available_times)
