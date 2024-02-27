@@ -1,8 +1,8 @@
 {
-  "name": "capstone_project",
+  "name": "little_lemon_website",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://dsootii.github.io/capstone_project",
+  "private": false,
+  "homepage": "https://dsootii.github.io/little_lemon_website",
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.11.3",
