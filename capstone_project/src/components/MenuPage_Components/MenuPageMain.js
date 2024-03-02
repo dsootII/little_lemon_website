@@ -1,10 +1,9 @@
 import React from "react";
+import UnderConstruction from "../UnderConstruction";
  
 const MenuPageMain = () => {
     return (
-        <div>
-            <h1>Menu Page</h1>
-        </div>
+        <UnderConstruction/>
     );
 };
  

@@ -1,10 +1,9 @@
 import React from "react";
+import UnderConstruction from "../UnderConstruction";
  
 const LoginPageMain = () => {
     return (
-        <div>
-            <h1>Login Page</h1>
-        </div>
+        <UnderConstruction/>
     );
 };
  

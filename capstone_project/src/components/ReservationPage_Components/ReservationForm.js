@@ -30,6 +30,7 @@ export default function ReservationForm(props) {
     const allAvailableTimes = ['17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'];
     const Occasions = ['Birthday', 'Anniversary', 'Business Meet', 'Other'];
     const navigate = useNavigate();
+    const [formIsSubmitted, setFormIsSubmitted] = useState(false);
 
     //trying the context way
     const {isLoading, response, submit} = useSubmit();
@@ -53,8 +54,10 @@ export default function ReservationForm(props) {
           occasion: "Birthday",
         },
         onSubmit: (values) => {
+            console.log("ONSUBMIT PROP CALLED");
+
             const {date, ...postValues} = values
-            console.log("ONSUBMIT PROP CALLED", postValues);
+            
             const postData = {};
             postData.name = postValues['firstName'];
             postData.email = postValues["email"];
@@ -62,13 +65,18 @@ export default function ReservationForm(props) {
             postData.reservation_time = postValues["res-time"];
             postData.guest_count = postValues['guests'];
             postData.occasion = postValues['occasion'];
+
             // submit("https://john.com/contactme", values);
             axios.post("https://k808.pythonanywhere.com/api/create", postData)
             .then((response) => {
                 console.log(response)
+                if (response.status === 201) {
+                    setFormIsSubmitted(true);
+                }
             }).catch((err) => {
                 console.log(err)
             });
+
         },
         validationSchema: Yup.object({
           firstName: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
@@ -90,9 +98,36 @@ export default function ReservationForm(props) {
     // console.log("formik values", formik.values);
 
 
+
+
     return (
     <>
     <div className='reservationFormContainer'>
+    
+    {
+        formIsSubmitted ? 
+            <Alert
+                status='success'
+                variant='subtle'
+                flexDirection='column'
+                alignItems='center'
+                justifyContent='center'
+                textAlign='center'
+                height='200px'
+            >
+                <AlertIcon boxSize='40px' mr={0} />
+                <AlertTitle mt={4} mb={1} fontSize='lg'>
+                    Reservation submitted!
+                </AlertTitle>
+                <AlertDescription maxWidth='sm'>
+                    Thanks for submitting your Reservation, {formik.values.firstName}. You will receive a mail with the receipt soon. You may now <Button variant="ghost">go back to the home page.</Button> 
+                </AlertDescription>
+            </Alert> 
+            :
+            <></>
+    }
+
+
     <VStack 
         color={"darkgreen"}
         backgroundColor={"gold"}
@@ -166,6 +201,7 @@ export default function ReservationForm(props) {
             <Button colorScheme='yellow' variant='outline' onClick={() => navigate('/')}>Go back to home page</Button>
             <Button colorScheme='darkgreen' variant='outline' type='submit'>Make your reservation</Button>
         </ButtonGroup>
+
 
 
     </form>

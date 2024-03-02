@@ -1,10 +1,9 @@
 import React from "react";
+import UnderConstruction from "../UnderConstruction";
  
 const ContactUsMain = () => {
     return (
-        <div>
-            <h1>Contact Us Page</h1>
-        </div>
+        <UnderConstruction/>
     );
 };
  
