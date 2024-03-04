@@ -120,7 +120,7 @@ export default function ReservationForm(props) {
                     Reservation submitted!
                 </AlertTitle>
                 <AlertDescription maxWidth='sm'>
-                    Thanks for submitting your Reservation, {formik.values.firstName}. You will receive a mail with the receipt soon. You may now <Button variant="ghost" onClick={navigate('/')}>go back to the home page.</Button> 
+                    Thanks for submitting your Reservation, {formik.values.firstName}. You will receive a mail with the receipt soon. You may now <Button variant="ghost" onClick={() => navigate('/')}>go back to the home page.</Button> 
                 </AlertDescription>
             </Alert> 
             :
