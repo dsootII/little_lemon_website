@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/little_lemon_website/static/css/main.d2c5bc16.css",
-    "main.js": "/little_lemon_website/static/js/main.e7b31cd3.js",
+    "main.css": "/little_lemon_website/static/css/main.d02edbd9.css",
+    "main.js": "/little_lemon_website/static/js/main.40b61903.js",
     "static/js/787.1fa52d8d.chunk.js": "/little_lemon_website/static/js/787.1fa52d8d.chunk.js",
     "static/media/food_dish": "/little_lemon_website/static/media/food_dish.0da29723de090abdf871",
     "static/media/pexels-kelly-2583373.jpg": "/little_lemon_website/static/media/pexels-kelly-2583373.389d0026ef86d0041f48.jpg",
     "static/media/greek salad.jpg": "/little_lemon_website/static/media/greek salad.23e2a85709a38f82672f.jpg",
     "static/media/kulcha.jpg": "/little_lemon_website/static/media/kulcha.bd2ef64c67d9c7892d3b.jpg",
-    "static/media/lata8_0.webp": "/little_lemon_website/static/media/lata8_0.50784a6110c22af75f1c.webp",
     "static/media/lemon dessert.jpg": "/little_lemon_website/static/media/lemon dessert.55345115ba6b3e8d3f0a.jpg",
     "static/media/kejriwal-4.webp": "/little_lemon_website/static/media/kejriwal-4.f37a7dad87e39df303e4.webp",
     "static/media/Logo.svg": "/little_lemon_website/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
     "static/media/photo-1454944338482-a69bb95894af.avif": "/little_lemon_website/static/media/photo-1454944338482-a69bb95894af.ffab25485189a2db901e.avif",
     "static/media/Sachin-Tendulkar.jpg": "/little_lemon_website/static/media/Sachin-Tendulkar.8bf97fc8e8c4efc963b9.jpg",
     "static/media/lemongrass.avif": "/little_lemon_website/static/media/lemongrass.ee6bd9ce01ab836040aa.avif",
+    "static/media/Eiichiro_Oda.webp": "/little_lemon_website/static/media/Eiichiro_Oda.48d64b63d8fa9242d33a.webp",
     "index.html": "/little_lemon_website/index.html",
-    "main.d2c5bc16.css.map": "/little_lemon_website/static/css/main.d2c5bc16.css.map",
-    "main.e7b31cd3.js.map": "/little_lemon_website/static/js/main.e7b31cd3.js.map",
+    "main.d02edbd9.css.map": "/little_lemon_website/static/css/main.d02edbd9.css.map",
+    "main.40b61903.js.map": "/little_lemon_website/static/js/main.40b61903.js.map",
     "787.1fa52d8d.chunk.js.map": "/little_lemon_website/static/js/787.1fa52d8d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2c5bc16.css",
-    "static/js/main.e7b31cd3.js"
+    "static/css/main.d02edbd9.css",
+    "static/js/main.40b61903.js"
   ]
 }
