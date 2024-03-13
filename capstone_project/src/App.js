@@ -19,11 +19,13 @@ import MenuPageMain from "./components/MenuPage_Components/MenuPageMain";
 import OrderOnlinePageMain from "./components/OnlineOrderPage_Components/OrderOnlinePageMain";
 import LoginPageMain from "./components/LoginPage_Components/LoginPageMain";
 import Alert from "./components/Alert";
+import { ResponsivenessProvider } from "./context/ResponsivenessContext";
 
  
 function App() {
     return (
         <>
+        <ResponsivenessProvider>
             {/* This is the alias of BrowserRouter i.e. Router */}
             <Router>
                 <Routes>
@@ -83,6 +85,7 @@ function App() {
                 </Routes>
             </Router>
             <Alert />
+        </ResponsivenessProvider>
         </>
     );
 }

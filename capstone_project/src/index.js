@@ -5,15 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { AlertProvider } from './context/AlertContext';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+  palette: {
+    mode: 'light', // Set the color mode to light
+  },
+  shadows: Array(25).fill('none')
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
-      <AlertProvider>
-        <App />
-      </AlertProvider>
-    </ChakraProvider>
+    <ThemeProvider theme={theme}>
+      <ChakraProvider>
+        <AlertProvider>
+          <App />
+        </AlertProvider>
+      </ChakraProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

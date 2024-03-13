@@ -234,3 +234,63 @@ h1 {
   background-size: cover;
 
 }
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .HEADER img {
+    width: 50%; /* Make the logo smaller on small devices */
+  }
+
+  .headerNavigationList {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .headerNavigationList li {
+    margin: 5px; /* Reduce margin */
+  }
+
+  .SpecialsSectionDiv > div, .TestimonialsSectionDiv > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SpecialsSectionDiv > div > div, .TestimonialsSectionDiv > div > div {
+    width: 90%; /* Use more of the screen for text */
+  }
+
+  .HeroSectionDiv {
+    display: flex;
+    flex-direction: column; /* Reverse the order of image and text on mobile */
+    align-items: center; /* Center-align content vertically */
+    padding: 20px; /* Add some padding for better spacing */
+  }
+
+  .HeroSectionTextPartDiv {
+      text-align: center; /* Center-align text content */
+      width: 90%;
+  }
+
+  .HeroSectionTextPartDiv section {
+      margin-bottom: 20px; /* Add space between text content and buttons */
+  }
+
+  #reserve_button,
+  #order_button {
+      width: 100%; /* Make buttons full width on mobile */
+      margin: 10px auto
+
+  }
+
+  img {
+      width: 200%; /* Make image fill the container width */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+}
+
+

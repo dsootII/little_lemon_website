@@ -1,6 +1,6 @@
 import Testimonial from "./Testimonial"
 import kejriwal from "../component_assets/kejriwal-4.webp";
-import lata from "../component_assets/lata8_0.webp";
+import oda from "../component_assets/Eiichiro_Oda.webp";
 import sachin from "../component_assets/Sachin-Tendulkar.jpg";
 
 export default function TestimonialsSection () {
@@ -22,9 +22,9 @@ export default function TestimonialsSection () {
                 imageSrc={kejriwal}
             />
             <Testimonial 
-                title="Lata Mangeshkar"
-                description="AAAAaaaa! OUuuuuu! ummm hmmmmmmm"
-                imageSrc={lata}
+                title="Eiichiro Oda"
+                description="Aaah I'm so full I can't walk! Break next week."
+                imageSrc={oda}
             />
             <Testimonial 
                 title="Sachin Tendulkar"

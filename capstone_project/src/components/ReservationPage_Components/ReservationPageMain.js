@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import ReservationForm from "./ReservationForm";
-
+import ReservationFormMobile from "./ReservationFormMobile";
 import { fetchAPI } from "../../ReservationFakeAPI";
 import { useEffect } from "react";
 import axios from 'axios';
+import { useResponsiveness } from "../../context/ResponsivenessContext";
 
 const ReservationPageMain = () => {
 
@@ -12,12 +13,15 @@ const ReservationPageMain = () => {
     const [date, setDate] = useState('');     //STATE VARIABLE HOLDING THE SELECTED DATE (browser default format: yyyy-mm-dd)
     const [availableTimes, setAvailableTimes] = useState(allAvailableTimes);
 
+    const {isMobileView} = useResponsiveness();
+
     useEffect(() => {
 
         // const availableTimesNotUnique = fetchAPI(date);
         // const availableTimesUniqueSet = new Set(availableTimesNotUnique);
         // const availableTimesUniqueList = Array.from(availableTimesUniqueSet);
         // setAvailableTimes(availableTimesUniqueList);
+
 
         axios.get('https://k808.pythonanywhere.com/api/available?date='+date)
         .then((response)=>{
@@ -42,7 +46,12 @@ const ReservationPageMain = () => {
 
     return (
         <div>
+            {isMobileView ? 
+            <ReservationFormMobile availableTimes={availableTimes} date={date} setDate={setDate} />
+            :
             <ReservationForm availableTimes={availableTimes} date={date} setDate={setDate} />
+            }
+            
         </div>
     );
 };

@@ -161,7 +161,7 @@ export default function ReservationForm(props) {
         </FormControl>
 
         {/* TIME FIELD */ }
-        {props.date ? 
+        { props.date ? 
             <div id='timeField'>
                 <FormControl isRequired>
                     <FormLabel htmlFor="res-time">Please choose an available slot for the selected date</FormLabel>
@@ -174,7 +174,7 @@ export default function ReservationForm(props) {
             <div>
                 Please select a date.
             </div>    
-    }
+        }
         
 
 
